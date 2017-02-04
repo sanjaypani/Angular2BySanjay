@@ -1,7 +1,7 @@
 <div class="panel panel-primary">
 
     <div class="panel-heading">
-        Employee List
+        {{pageTitle}}
     </div>
 
      <!-- Filter the Products   -->
@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <div class='table-responsive'>
+        <div class='table-responsive' *ngIf='employees && employees.length'>
             <table class='table'>
                 <thead>
                     <tr>
@@ -36,6 +36,14 @@
                 </thead>
 
                 <tbody>
+                    <tr *ngFor='let employee of employees'>
+                        <td></td>
+                        <td>{{employee.name}}</td>
+                        <td>{{employee.id}}</td>
+                        <td>{{employee.country}}</td>
+                        <td>{{employee.salary}}</td>
+                        <td>{{employee.starRating}}</td>
+                    </tr>
                 
                 </tbody>
             </table>
