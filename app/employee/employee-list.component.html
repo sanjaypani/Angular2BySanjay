@@ -23,7 +23,8 @@
                 <thead>
                     <tr>
                         <th>
-                            <button class='btn btn-primary'>
+                            <button class='btn btn-primary'
+                            (click) = 'toggleImage()'>
                                 Show Image
                             </button>
                         </th>
@@ -37,7 +38,14 @@
 
                 <tbody>
                     <tr *ngFor='let employee of employees'>
-                        <td></td>
+                        <td>
+                            <img *ngIf='showImage'
+                                 [src]='employee.imageUrl'
+                                 [title] ='employee.name'
+                                 [style.width.px] = 'imageWidhth'
+                                 [style.margin.px] = 'imageMargin'>
+                        
+                        </td>
                         <td>{{employee.name}}</td>
                         <td>{{employee.id}}</td>
                         <td>{{employee.country}}</td>
