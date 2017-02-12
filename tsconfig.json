@@ -9,5 +9,11 @@
     "removeComments": false,
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true
-  }
+  },
+  "types" : [
+    "core-js"
+  ],
+"exclude": [
+"node_modules"
+]
 }
